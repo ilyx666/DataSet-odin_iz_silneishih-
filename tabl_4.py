@@ -131,13 +131,13 @@ kolvo_mathcey = []
 wins = []
 d = 0
 for name_sv in hm_sv:
-    if hm_sv[name_sv] > 10:
+    if hm_sv[name_sv] > 20:
         name_svyazki.append(name_sv)
-        kolvo_mathcey.append(((hm_sv[name_sv] * 100) / len(hm_sv)) * 10)
+        kolvo_mathcey.append(round(((hm_sv[name_sv] * 100) / len(hm_sv)) * 10, 2))
     for hhh in hm_sv_win:
-        if hm_sv[name_sv] > 10:
+        if hm_sv[name_sv] > 20:
             if name_sv == hhh:
-                wins.append((hm_sv_win[hhh] * 100) / hm_sv[name_sv])
+                wins.append(round((hm_sv_win[hhh] * 100) / hm_sv[name_sv], 2))
         d += 1
 print(len(kolvo_mathcey))
 print(len(wins))
